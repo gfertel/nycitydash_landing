@@ -11,6 +11,35 @@
         <!--icons-->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/png" href="img/c1-1.png"/>
+                <!-- Facebook Pixel Code -->
+        <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1741705969480657');
+          fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=1741705969480657&ev=PageView&noscript=1"
+        /></noscript>        
+        <!-- End Facebook Pixel Code -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113132164-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113132164-1');
+</script>
+
+
     </head>
     <body>
         <!--header-->
@@ -44,8 +73,8 @@
                             NYCityDash is a free iPhone and Android tablet app providing real time subway, CitiBike, and weather information. It is designed to be kept on 24/7 and placed in a prominent location in your home. Then, whenever you're leaving the apartment, you'll have your personalized transit information right in front of you.
                         </p>
                         <p class="mt-5">
-                            <a href="#" class="mr-2"><img src="img/google-play.png" class="store-img"/></a>
-                            <a href="#"><img src="img/apple_store.png" class="store-img"/> </a>
+                            <a href="https://google.com" target="_blank" class="mr-2"><img src="img/google-play.png" class="store-img"/></a>
+                            <a href="https://apple.com" target="_blank"><img src="img/apple_store.png" class="store-img"/> </a>
                         </p>
                     </div>
                     <div class="col-md-6 pt-5 d-none d-md-block wow fadeInRight">
@@ -126,8 +155,8 @@
                     <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-12">
                         <h2 class="text-primary">Download & get started today!</h2>
                         <p class="mt-5">
-                            <a href="#" class="mr-2"><img src="img/google-play.png" class="store-img"/></a>
-                            <a href="#"><img src="img/apple_store.png" class="store-img"/> </a>
+                            <a href="https://google.com" target="_blank" class="mr-2"><img src="img/google-play.png" class="store-img"/></a>
+                            <a href="https://apple.com" target="_blank"><img src="img/apple_store.png" class="store-img"/> </a>
                         </p>
                     </div>
                 </div>
@@ -142,9 +171,7 @@
                     <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
                         <h2 class="hero-heading text-muted">NYCityDash</h2>
                         <p class="mt-4">
-                            <a href="https://twitter.com/" target="_blank"><em class="ion-social-twitter text-twitter-alt icon-sm mr-3"></em></a>
-                            <a href="https://facebook.com/" target="_blank"><em class="ion-social-github text-facebook-alt icon-sm mr-3"></em></a>
-                            <a href="https://www.linkedin.com/" target="_blank"><em class="ion-social-linkedin text-linkedin-alt icon-sm mr-3"></em></a>
+                            <a href="https://www.facebook.com/NYCityDash-231179137424242/" target="_blank"><em class="ion-social-github text-facebook-alt icon-sm mr-3"></em></a>
                         </p>
                     </div>
                 </div>
@@ -158,4 +185,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
         <script src="js/scripts.js"></script>
     </body>
+    <script>
+        document.querySelector("img[src='img/google-play.png']").addEventListener('click', 
+            function() {
+                console.log("logging apple store click")
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'link_click',
+                  eventAction: 'google_play_store',
+                  eventLabel: 'Click to Google Play Store'
+                });
+
+            })
+        fbq('track', "AddToCart");
+
+        document.querySelector("img[src='img/apple_store.png']").addEventListener('click', 
+            function() {
+                console.log("logging apple store click")
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'link_click',
+                  eventAction: 'app_store',
+                  eventLabel: 'Click to App Store'
+                });
+
+            })
+        fbq('track', "AddToCart");
+    </script>
 </html>
